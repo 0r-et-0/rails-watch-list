@@ -15,11 +15,9 @@
 <% end %>
 </ul>
 
-
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 
 <div class="d-flex justify-content-between">
-
-
   <button type="button" class="btn btn-secondary">
   <%= link_to "go back to lists", lists_path%>
   </button>
