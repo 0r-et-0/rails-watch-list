@@ -1,0 +1,13 @@
+<h1>Add a new Bookmark</h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit "crete new Bookmark" %>
+
+
+<% end %>
+
+  <button type="button" class="btn btn-secondary mt-4">
+    <%= link_to "go back to lists", lists_path%>
+  </button>

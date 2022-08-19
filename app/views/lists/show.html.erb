@@ -1,0 +1,26 @@
+<h1 class="mb-4"><%= @list.name %></h1>
+
+<button type="button" class="btn btn-primary mb-2">
+<%= link_to "add a Bookmark", new_list_bookmark_path(@list) %>
+</button>
+
+<ul class="list-group mb-4">
+<% @bookmarks.each do |bookmark|%>
+  <li class="list-group-item mb-2">
+    <div>
+      <h3><%= bookmark.movie.title %></h3>
+      <p><%= bookmark.comment %></p>
+    </div>
+  </li>
+<% end %>
+</ul>
+
+
+
+<div class="d-flex justify-content-between">
+
+
+  <button type="button" class="btn btn-secondary">
+  <%= link_to "go back to lists", lists_path%>
+  </button>
+</div>
