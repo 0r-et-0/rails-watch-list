@@ -4,6 +4,7 @@
 <% @lists.each do |list| %>
   <li class="list-group-item mb-2">
   <h2><%= link_to list.name, list_path(list) %></h2>
+  <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
   </li>
 <% end %>
 </ul>
